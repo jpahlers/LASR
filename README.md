@@ -40,24 +40,17 @@ METHOD
 GEN
 
 -used to generate synthetic data to test LASR routine
-
 tseriesfile -> name of output time series (must end in Jcube)
-
 tstr-> start time of time series in seconds
-
 tend -> end time
-
 tspc -> cadence of time bins
-
 st_dev -> 1-sigma Gaussian uncertainty of flux measurements
-
 lag_cor -> lag-1 autocorrelation value between points (scaled 0 to 1)
-
 DATA GAPS -> start and stop times of any data gaps you want in the time series
-
 ADDED OSCILLATIONS-> normalization constant of time series, sinusouids to be added to time series
 
 PREP
+
 -used to prepare Kepler time series for fitting, including masking transits -- not pertinent in demo version
 
 PER
