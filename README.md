@@ -3,10 +3,10 @@ This is a simplified, open-access demo version of the Jcube file system as well 
 
 The install.sh and Makefiles of the respective programs are tailored to work on Ubuntu 16.04 (x64).
 
-
 INSTALL DEPENDENCIES
 =====================================
 The majority of the programs' dependencies install together. However, two libraries need to be installed before installing Jcube:
+	
 	cspice
 		-install from source code (https://naif.jpl.nasa.gov/naif/toolkit.html)
 		-after installation go to .../cspice/lib/ and copy cpsice.a into /usr/lib/libcspice.a
@@ -16,7 +16,9 @@ The majority of the programs' dependencies install together. However, two librar
 		-unzip and configure in /usr/include
 
 INSTALL JCUBE, TRANSITFITTER, LASR:
-	in the JCUBE_2018_LIGHTCURVE_ANLS directory,
+
+in the JCUBE_2018_LIGHTCURVE_ANLS directory,
+
 	>chmod +x install.sh
 	>./install.sh
 		
@@ -25,6 +27,7 @@ This script installs the libraries qt4, boost, gdal, and commandl. It then insta
 LASR USAGE
 =====================================
 After installation, LASR runs via command line
+	
 	>LASR
 Settings are controlled in the LASRdata.in file in the c++/Jcube/LASR directory. This file must be in whatever working directory you run LASR out of. In general, LASR reads in and outputs Jcube files, a file system developed by Jason Barnes at the University of Idaho.
 
