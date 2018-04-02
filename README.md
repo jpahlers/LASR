@@ -34,17 +34,27 @@ Settings are controlled in the LASRdata.in file in the c++/Jcube/LASR directory.
 Everything in the LASRdata.in file must be tab delineated. Below are usage instructions for this file:
 
 METHOD
+
 -the methods are GEN (generate data), PREP (prepare Kepler time series for fitting, including masking transits -- not pertinent in demo version), PER (calculate Lomb-Scargle normalized periodogram), LASR (run the LASR fitting algorithm), and ANLZ (additional options for analyzing results).
 
 GEN
+
 -used to generate synthetic data to test LASR routine
+
 tseriesfile -> name of output time series (must end in Jcube)
+
 tstr-> start time of time series in seconds
+
 tend -> end time
+
 tspc -> cadence of time bins
+
 st_dev -> 1-sigma Gaussian uncertainty of flux measurements
+
 lag_cor -> lag-1 autocorrelation value between points (scaled 0 to 1)
+
 DATA GAPS -> start and stop times of any data gaps you want in the time series
+
 ADDED OSCILLATIONS-> normalization constant of time series, sinusouids to be added to time series
 
 PREP
