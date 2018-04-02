@@ -3,7 +3,7 @@ This is a simplified, open-access demo version of the Jcube file system as well 
 
 The install.sh and Makefiles of the respective programs are tailored to work on Ubuntu 16.04 (x64).
 
-=====================================
+
 INSTALL DEPENDENCIES
 =====================================
 The majority of the programs' dependencies install together. However, two libraries need to be installed before installing Jcube:
@@ -22,7 +22,6 @@ INSTALL JCUBE, TRANSITFITTER, LASR:
 		
 This script installs the libraries qt4, boost, gdal, and commandl. It then installs (in order) Jcube (with the Makefile in the c++/Jcube directory), transitfitter dependencies (in the c++/Jcube/theoreticaltransit directory), transitfitter (in the c++/Jcube/theoreticaltransit/transitfitter directory), and LASR (in the c++/Jcube/LASR directory).
 
-=====================================
 LASR USAGE
 =====================================
 After installation, LASR runs via command line
@@ -72,7 +71,6 @@ ANALYSIS
 -ANLZ contains several modes that can be chosen from on the ANALYSIS(UNCER,SUB,WRITE,SORT,PROP) line
 -the modes are UNCER (calculate uncertainties of best-fit values), SUB (perform a complete oscillation subtraction using all best-fit values), WRITE (write periodogram or time series Jcube files as .txt files for easy use outside of these programs), SORT (sort fitfreqs Jcube by ascending frequency), PROP (propagate best-fit uncertainties into the subtracted time series), ADDT (add periodic transit events to synthetic data using a template transit)
 
-=====================================
 TRANSITFITTER USAGE
 =====================================
 I also included the program transitfitter as part of this code to make visualization of Jcube time series and periodograms easier. Transitfitter is a complicated program -- I do not include its full functionality in this demo and I only list its usage abilities and options that are directly relevant to LASR.
@@ -97,7 +95,6 @@ VIEW FITTING RESULTS
 	--this does not perform an actual fit in the demo mode. I set all parameters to be static, so all this does is display a best-fit line
 -to the right of the display, the button 'Residual' will display the residual of the best-fit
 
-=====================================
 CREATING/STORING FITFREQS.JCUBE
 =====================================
 For the purposes of this demo, I have added two simple additional bits of code to make handling fitfreqs Jcube files easier -- out2fitfreqs and fitfreqs2out. To use one these commands, first go into the c++/Jcube/LASR Makefile and edit the top line to say the name of the program you want to compile. In that directory, run:
@@ -109,7 +106,6 @@ With out2fitfreqs and fitfreqs2out compiled, you can convert a fitfreqs Jcube fi
 	>fitfreqs2out fitfreqs.out fitfreqs.Jcube
 I have included both a demofitfreqs.Jcube file and a demofitfreqs.out file. The format of fitfreqs.out is straightforward, but must match the example with 3 tab-delineated 0's at the end of each line.
 
-=====================================
 DEMO FILES INCLUDED
 =====================================
 The c++/Jcube/LASR directory includes several demo files to show how LASR works.
